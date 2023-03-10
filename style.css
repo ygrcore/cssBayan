@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+    background-color: #f5f5eb;
+    color: #0059d9;
+
+}
+
+h1 {
+    color: #000000;
+    font-weight:900;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+/******************* mobile first mobile 320x568 ******************/
+
+.acc-wrapper {
+    max-width: 280px;
+    margin: 20px auto;
+}
+
+
+
+.acc-inner {
+    border: 1px solid green;
+}
+
+.text {
+    transition: color .2s ease-out;
+}
+.acc-wrapper:hover .text{
+    color:#000000;
+}
+/* .acc-item {
+    display: flex;
+    justify-content: space-between;
+} */
+img {
+    width: -webkit-fill-available;
+}
+.acc-title {
+    /* display: block;
+    cursor: pointer; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+	cursor: pointer;
+	position: relative;
+	padding-left: 5px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+}
+
+.acc-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.close-icon svg{
+    width: 15px;
+    height: 15px;
+    transform: rotate(0deg);
+    cursor: pointer;
+    transition: transform .2s linear;
+}
+
+.acc-content {
+    display: none;
+}
+
+.acc-input:checked ~ .acc-content {
+    display: block;
+}
+
+.acc-input:checked ~ label .close-icon svg {
+    transform: rotate(45deg);
+}
