@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.5;
     background-color: #f5f5eb;
@@ -42,23 +42,31 @@ p {
 .acc-wrapper:hover .text{
     color:#000000;
 }
-/* .acc-item {
+.acc-wrapper:hover .close-icon{
+    visibility: visible;
+}
+.acc-item {
     display: flex;
     justify-content: space-between;
-} */
-img {
-    width: -webkit-fill-available;
 }
+.close-icon {
+    visibility: hidden;
+    transition: visibility .2s linear;
+}
+img {
+    width: 100%;
+}
+
 .acc-title {
     /* display: block;
     cursor: pointer; */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     flex-grow: 1;
 	cursor: pointer;
 	position: relative;
-	padding-left: 5px;
+	/* padding-left: 5px; */
 	margin-right: 0;
 	line-height: 18px;
 	user-select: none;
@@ -73,19 +81,39 @@ img {
 }
 
 .close-icon svg{
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     transform: rotate(0deg);
     cursor: pointer;
     transition: transform .2s linear;
 }
 
 .acc-content {
-    display: none;
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: width .3s ease-out;
 }
 
-.acc-input:checked ~ .acc-content {
+.acc-input:checked ~ label .acc-content {
     display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    visibility: visible;
+}
+.acc-input:hover ~ label .acc-content {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    visibility: visible;
+}
+
+.acc-input:checked ~ label .text {
+    color:#000000;
 }
 
 .acc-input:checked ~ label .close-icon svg {
