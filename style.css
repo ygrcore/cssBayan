@@ -11,6 +11,7 @@ body {
 h1 {
     color: #000000;
     font-weight:900;
+    margin: 0;
 }
 
 *,
@@ -29,11 +30,24 @@ p {
     max-width: 280px;
     margin: 20px auto;
 }
+.title:after {
+    height: 1px;
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    background: #808080;
+    content: '';
+    margin: 5px 0 5px;
+}
 
-
-
-.acc-inner {
-    border: 1px solid green;
+.acc:after {
+    height: 1px;
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    background: #808080;
+    content: '';
+    margin: 5px 0 5px;
 }
 
 .text {
@@ -58,15 +72,9 @@ img {
 }
 
 .acc-title {
-    /* display: block;
-    cursor: pointer; */
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
     flex-grow: 1;
 	cursor: pointer;
 	position: relative;
-	/* padding-left: 5px; */
 	margin-right: 0;
 	line-height: 18px;
 	user-select: none;
@@ -81,6 +89,7 @@ img {
 }
 
 .close-icon svg{
+    display: block;
     width: 12px;
     height: 12px;
     transform: rotate(0deg);
@@ -91,6 +100,7 @@ img {
 .acc-content {
     display: block;
     margin: 0 auto;
+    padding-top: 5px;
     width: 0;
     height: 0;
     visibility: hidden;
@@ -107,6 +117,7 @@ img {
 .acc-input:hover ~ label .acc-content {
     display: block;
     margin: 0 auto;
+    padding-top: 5px;
     width: 80%;
     height: auto;
     visibility: visible;
@@ -118,4 +129,77 @@ img {
 
 .acc-input:checked ~ label .close-icon svg {
     transform: rotate(45deg);
+}
+
+/******************** tablet  820x1180 **********************/
+@media (min-width: 820px) {
+    h1 {
+        font-size: 40px;
+    }
+    .title:after {
+        margin: 10px 0 10px;
+    }
+    .acc:after {
+        margin: 10px 0 10px;
+    }
+
+    .acc-wrapper {
+        max-width: 580px;
+        margin: 20px auto;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .close-icon svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    .acc-content {
+        padding-top: 12px;
+    }
+
+    .acc-input:hover ~ label .acc-content {
+        padding-top: 12px;
+    }
+}
+
+/******************** desktop 1920×1080 **********************/
+
+@media (min-width: 1920px) {
+    h1 {
+        font-size: 60px;
+    }
+    .title:after {
+        margin: 20px 0 20px;
+    }
+    .acc:after {
+        margin: 20px 0 20px;
+    }
+
+    .acc-wrapper {
+        max-width: 1580px;
+        margin: 40px auto;
+    }
+
+    .text {
+        font-size: 35px;
+    }
+
+    .close-icon svg {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .acc-content {
+        padding-top: 20px;
+    }
+
+    .acc-input:hover ~ label .acc-content {
+        padding-top: 20px;
+    }
 }
