@@ -173,7 +173,7 @@ img {
         .acc-input:hover ~ label .acc-content {
             display: block;
             margin: 0 auto;
-            padding-top: 5px;
+            padding-top: 12px;
             width: 80%;
             height: auto;
             visibility: visible;
@@ -221,7 +221,7 @@ img {
         .acc-input:hover ~ label .acc-content {
             display: block;
             margin: 0 auto;
-            padding-top: 5px;
+            padding-top: 20px;
             width: 80%;
             height: auto;
             visibility: visible;
