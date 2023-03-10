@@ -169,15 +169,6 @@ img {
         padding-top: 12px;
     }
 
-    .acc-content {
-        display: none;
-        margin: 0 auto;
-        padding-top: 5px;
-        width: 0;
-        height: 0;
-        visibility: hidden;
-        transition: width .3s ease-out;
-    }
     @media (hover: hover) {
         .acc-input:hover ~ label .acc-content {
             display: block;
