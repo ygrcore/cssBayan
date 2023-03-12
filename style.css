@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 0.875rem;
+    /* font-size: 14px; */
+    font-weight: 800;
+    line-height: 1.5;
+    background-color: #f5f5eb;
+    color: #0059d9;
+
+}
+
+h1 {
+    color: #000000;
+    font-weight:900;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/******************* mobile first mobile 320x568 ******************/
+
+.acc-wrapper {
+    max-width: 90%;
+    margin: 1.25rem auto;
+    /* max-width: 280px; */
+    /* margin: 20px auto; */
+}
+.title:after {
+    height: 0.063rem;
+    /* height: 1px; */
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    background: #808080;
+    content: '';
+    margin: 0.313rem 0 0.313rem;
+    /* margin: 5px 0 5px; */
+}
+
+.acc:after {
+    height: 0.063rem;
+    /* height: 1px; */
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    background: #808080;
+    content: '';
+    margin: 0.313rem 0 0.313rem;
+    /* margin: 5px 0 5px; */
+}
+
+.text {
+    transition: color .2s ease-out;
+}
+.acc-wrapper:hover .text{
+    color:#000000;
+}
+.acc-wrapper:hover .close-icon{
+    visibility: visible;
+}
+.acc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close-icon {
+    visibility: hidden;
+    transition: visibility .2s linear;
+}
+img {
+    width: 100%;
+}
+
+.acc-title {
+    flex-grow: 1;
+	cursor: pointer;
+	position: relative;
+	margin-right: 0;
+    line-height: 1.2rem;
+	/* line-height: 18px; */
+	user-select: none;
+}
+
+.acc-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.close-icon svg{
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    /* width: 12px;
+    height: 12px; */
+    transform: rotate(0deg);
+    cursor: pointer;
+    transition: transform .2s linear;
+}
+
+.acc-content {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.313rem;
+    /* padding-top: 5px; */
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: width .3s ease-out;
+}
+
+.acc-input:checked ~ label .acc-content {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    visibility: visible;
+}
+@media (hover: none) {
+    .acc-input:hover ~ label .acc-content {
+        display: block;
+        margin: 0 auto;
+        padding-top: 0.313rem;
+        /* padding-top: 5px; */
+        width: 80%;
+        height: auto;
+        visibility: visible;
+    }
+}
+
+
+.acc-input:checked ~ label .text {
+    color:#000000;
+}
+
+.acc-input:hover ~ label .close-icon svg {
+    transform: rotate(45deg);
+}
+.acc-input:checked ~ label .close-icon svg {
+    transform: rotate(135deg);
+}
+
+/******************** tablet  820x1180 **********************/
+@media (min-width: 820px) {
+    h1 {
+        font-size: 3rem;
+        /* font-size: 40px; */
+    }
+    .title:after {
+        margin: 0.625rem 0 0.625rem;
+        /* margin: 10px 0 10px; */
+    }
+    .acc:after {
+        margin: 0.625rem 0 0.625rem;
+        /* margin: 10px 0 10px; */
+    }
+
+    .acc-wrapper {
+        max-width: 60%;
+        margin: 1.25rem auto;
+        /* max-width: 580px; */
+        /* margin: 20px auto; */
+    }
+
+    .text {
+        font-size: 1.3rem;
+        /* font-size: 20px; */
+    }
+
+    .close-icon svg {
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        /* width: 20px;
+        height: 20px; */
+    }
+
+    .acc-content {
+        padding-top: 0.75rem;
+        /* padding-top: 12px; */
+    }
+
+    .acc-input:hover ~ label .acc-content {
+        padding-top: 0.75rem;
+        /* padding-top: 12px; */
+    }
+
+    @media (hover: hover) {
+        .acc-input:hover ~ label .acc-content {
+            display: block;
+            margin: 0 auto;
+            padding-top: 0.75rem;
+            /* padding-top: 12px; */
+            width: 80%;
+            height: auto;
+            visibility: visible;
+        }
+    }
+
+}
+
+/******************** desktop 1920×1080 **********************/
+
+@media (min-width: 1920px) {
+    h1 {
+        font-size: 3.75rem;
+        /* font-size: 60px; */
+    }
+    .title:after {
+        margin: 1.25rem 0 1.25rem;
+        /* margin: 20px 0 20px; */
+    }
+    .acc:after {
+        margin: 1.25rem 0 1.25rem;
+        /* margin: 20px 0 20px; */
+    }
+
+    .acc-wrapper {
+        max-width: 50%;
+        margin: 2.5rem auto;
+        /* max-width: 1580px; */
+        /* margin: 40px auto; */
+    }
+
+    .text {
+        font-size: 2.2rem;
+        /* font-size: 35px; */
+    }
+
+    .close-icon svg {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        /* width: 40px;
+        height: 40px; */
+    }
+
+    .acc-content {
+        padding-top: 1.25rem;
+        /* padding-top: 20px; */
+    }
+
+    .acc-input:hover ~ label .acc-content {
+        padding-top: 1.25rem;
+        /* padding-top: 20px; */
+    }
+    @media (hover: hover) {
+        .acc-input:hover ~ label .acc-content {
+            display: block;
+            margin: 0 auto;
+            padding-top: 1.25rem;
+            /* padding-top: 20px; */
+            width: 80%;
+            height: auto;
+            visibility: visible;
+        }
+    }
+}
